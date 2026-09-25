@@ -30,11 +30,16 @@
   <build>
     <finalName>myapp</finalName>
     <plugins>
-      <plugin>
+           <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-war-plugin</artifactId>
         <version>3.3.1</version>
+        <!-- Add the configuration block below to allow missing web.xml files -->
+        <configuration>
+            <failOnMissingWebXml>false</failOnMissingWebXml>
+        </configuration>
       </plugin>
+
 	    <plugin>
     <groupId>org.sonarsource.scanner.maven</groupId>
     <artifactId>sonar-maven-plugin</artifactId>
