@@ -29,8 +29,11 @@ jobs:
 
       # 4. Build with Maven
             # 4. Build with Maven (Configured to allow missing web.xml files safely)
+            # 4. Build with Maven
       - name: Build with Maven
-        run: mvn clean package -DskipTests -DfailOnMissingWebXml=false
+        run: mvn clean package -DskipTests
+
+        
 
       
 
