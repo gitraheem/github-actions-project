@@ -28,8 +28,11 @@ jobs:
           cache: 'maven'
 
       # 4. Build with Maven
+            # 4. Build with Maven (Configured to allow missing web.xml files safely)
       - name: Build with Maven
-        run: mvn clean package -DskipTests
+        run: mvn clean package -DskipTests -DfailOnMissingWebXml=false
+
+      
 
       # 5. Upload WAR as artifact
       - name: Upload WAR artifact
